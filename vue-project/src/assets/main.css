@@ -1,35 +1,61 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+h1 { text-align: center; margin-bottom: 30px; font-size: 2.5em; color: #a8dadc; }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.form-group { margin-bottom: 20px; }
+
+label { display: block; margin-bottom: 8px; font-size: 0.9em; color: #a8dadc; }
+
+input {
+  width: 100%; padding: 12px; border: none; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff; font-size: 1em;
+  border: 1px solid rgba(255,255,255,0.2);
 }
+input:focus { outline: none; background: rgba(255,255,255,0.25); border-color: #a8dadc; }
+
+button {
+  width: 100%; padding: 12px; border: none; border-radius: 8px;
+  background: linear-gradient(135deg, #e94560, #c73b54);
+  color: white; font-size: 1.1em; font-weight: bold; cursor: pointer;
+}
+button:hover { opacity: 0.9; }
+button:disabled { opacity: 0.5; cursor: default; }
+
+.links { text-align: center; margin-top: 20px; }
+.links a { color: #a8dadc; text-decoration: none; margin: 0 10px; }
+.links a:hover { color: #e94560; text-decoration: underline; }
+
+.msg { text-align: center; margin-top: 14px; min-height: 20px; }
+.msg.error { color: #e94560; }
+.msg.ok { color: #4caf50; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+th { background: rgba(233,69,96,0.3); color: #a8dadc; }
+tr:hover { background: rgba(255,255,255,0.05); }
+.score { font-weight: bold; color: #e94560; }
